@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+/* scrollBar,defaultCol */
+html.lightMode{
+/* 'lightMode','rgb(0, 0, 0)' */
+
+  --background-color:white;
+  --font-color:black;
+  --blur-color:rgba(0, 0, 0, 0.623);
+  --settings-bg-color:white;
+  --scrollbar-thumb-col:rgb(136, 136, 136);
+  --scrollbar-thumb-hover:rgb(85, 85, 85);
+  --scrollbar-track-col:rgb(212, 212, 212);
+  --group-list-elm-col:rgba(209, 209, 209, 0.473);
+  --group-list-elm-hover:rgba(148, 148, 148, 0.288);
+  --border-color:rgba(36, 36, 36, 0.342);
+  --border-color-hover:rgba(34, 34, 34, 0.658);
+  --place-holder-col:rgb(126, 126, 126);
+}
+html.darkMode{
+/* darkMode','rgb(255,255,255)' */
+
+  --background-color:rgb(30, 30, 30);
+  --font-color:rgb(228, 228, 228);
+  --blur-color:rgba(0, 0, 0, 0.300);
+  --settings-bg-color:rgb(40, 40, 40);
+  --scrollbar-thumb-col:rgb(44, 44, 44);
+  --scrollbar-thumb-hover:rgb(39, 39, 39);
+  --scrollbar-track-col:rgb(110, 110, 110);
+  --group-list-elm-col:rgba(44, 44, 44, 0.473);
+  --group-list-elm-hover:rgba(148, 148, 148, 0.288);
+  --border-color:rgba(199, 199, 199, 0.315);
+  --border-color-hover:rgba(214, 214, 214, 0.342);
+  --place-holder-col:rgb(131, 131, 131);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+#messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#messages::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-col);
+  border-radius: 5px;
+}
+ 
+#messages::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-col);
+  border-radius: 5px;
+}
+
+#messages::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+
+.warning{
+  /* display:none; */
+  width: 300px;
+  display: none;
+}
+.warning{
+  background-color: var(--background-color);
+  color:var(--font-color);
+}
+
+.warning h1{
+  padding-bottom: 40px;
+}
+
+.warning h1{
+  padding-bottom:40px;
+}
+
+.warning p, .warning span{
+  font-size:20px;
+}
+
+.blur{
+  position: fixed;
+  top:0;
+  left:0;
+  display: none;
+  width:100vw;
+  height:100vh;
+  z-index: 12;
+  background-color: var(--blur-color);
+}
+
+.popup{
+  z-index:999999;
+  border:1px solid black;
+  border-radius: 10px;
+  padding:20px;
+  position:fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  top:50vh;
+  left:50vw;
+  transform:translate(-50% ,-50%);
+  text-align: center;
+  background-color: var(--background-color);
+}

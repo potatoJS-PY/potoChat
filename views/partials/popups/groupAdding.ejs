@@ -1,0 +1,26 @@
+<div id="group-create" class="popup notActive">
+  <p class="required">hi</p>
+  <button class="close-button" onclick="closeGroupAdder()">&#10006</button>
+  <div id="join-group-div">
+    <h1 class="headerH1">Join a group</h1>
+    <input type="text" spellcheck="false" id="group-join-name-input" placeHolder="group's name"></br>
+    <input type="text" spellcheck="false" id="group-join-psd-input" placeHolder="password (if it has one)">
+    <button id="join-group">join</button>
+  </div>
+  <div id="create-group-div">
+  <h1 class="headerH1">Create your own!</h1>
+  <input id="create-group-name-input" type="text" spellcheck="false" placeHolder="name (e.g  poto-cool-chat!)">
+  </br>
+  <input class="activeInput" id="create-group-password-input" spellcheck="false" type="text" placeHolder="password (e.g  psw123)"></br>
+  <h6>remarque: you can't created more than <%= info.groupLimit %> group for reasons...</h6>
+
+  <div id="group-privacy-select">
+    <div class="notActiveOption" id="privacy-option">private</div>
+    <div>public</div>
+  </div>
+  </div>
+  <div class="settingsButtonsSaveCancel">
+    <button id="continue-group-adding" class="save">continue</button>
+  </div>
+</div>
+<div class="blur" id="blur-group-create"></div>

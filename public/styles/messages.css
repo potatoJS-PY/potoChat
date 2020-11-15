@@ -1,0 +1,72 @@
+#messages{
+  z-index: 12;
+  display: block;
+  height:calc(100vh - 60px);
+  overflow-y:scroll;
+  overflow-x: hidden;
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+#chatSpot {
+  padding: 3px; 
+  width: 100%;  
+}
+
+#someone-is-typing{
+  margin-left: 10px;
+  font-size: 15px;
+  height:19px;
+}
+
+.message-content{
+  display: inline-block;
+  margin: 0 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  width:calc(100% - 20px);
+  white-space: break-spaces;
+}
+
+.nickName{
+  display: inline-block;
+  padding:0 5px 5px 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#chatSpot #m {
+  border: none; 
+  box-shadow: 0 0 2px 1px rgb(161, 161, 161);
+  padding: 10px; 
+  width: calc(100% - 5px); 
+  margin:0;
+  margin-right:5px;
+  border-radius: 10px;
+  outline: none;
+  resize: none;
+  height:36px;
+  color:var(--font-color);
+  background-color: var(--background-color);
+}
+
+#messages li.message {
+  padding: 8px 10px; 
+}
+
+#messages .message:nth-child(odd) {
+  background: rgba(92, 92, 92, 0.096);
+}
+#typingDiv{
+  display: flex;
+}
+#typingDiv P{
+  margin-left:5px;
+}
+#typingDiv span{
+  font-weight: bold;
+  color:var(--font-color);
+  height:19px;
+}

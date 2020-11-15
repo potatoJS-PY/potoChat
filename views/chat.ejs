@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="<%= user.usermeta.mode %>">
+<head>
+  <link rel="icon" href="/images/potato.png">
+  <script src="https://kit.fontawesome.com/a0dcbd7f59.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>main chat</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="/styles/menu.css">
+  <link rel="stylesheet" href="/styles/globals.css">
+  <link rel="stylesheet" href="/styles/messages.css">
+  <link rel="stylesheet" href="/styles/settings.css">
+  <link rel="stylesheet" href="/styles/groups.css">
+  <link rel="stylesheet" href="/styles/markdown.css">
+  </head>
+  <body class="starting">
+    <div class="notActive" id="secret-blur"></div>
+    <img id="loading" src="/images/pJS.png" alt="potato">
+
+    <!-- popups -->
+    <%- include('./partials/popups/sure'); %>
+    <%- include('./partials/popups/settings'); %>
+    <%- include('./partials/popups/groupAdding'); %>
+    <%- include('./partials/popups/banned'); %>
+    <%- include('./partials/popups/messageLengthWarning'); %>
+    <!------------>
+
+    <div id="main-chat-content">
+    <ul id="messages" class="lightMode">
+    </ul>
+      <div id="chatSpot">
+        <textarea spellcheck="false" id="m" placeHolder="send message to: #<%= user.usermeta.group %>"></textarea>
+        <div id="typingDiv">
+          <span id="userTypingBody"></span>
+        <p id="someone-is-typing"><p>
+          </div>
+      </div>
+    </div>
+
+    <%- include("./partials/menu"); %>
+    <%- include('./partials/js/scripts'); %>
+    <%- include('./partials/js/messages'); %>
+    
+    <script src="/chat.js"></script>
+  </body>
+</html>

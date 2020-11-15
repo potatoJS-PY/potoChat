@@ -1,0 +1,221 @@
+.close-button{
+  background:transparent;
+  border:none;
+  color:inherit;
+  position:fixed;
+  font-size: 20px;
+  top:6px;
+  right:10px;
+}
+#ban-message{
+  width:380px;
+}
+#ban-message h1{
+  color:rgb(255, 0, 0);
+  margin-bottom:40px;
+}
+#ban-message p{
+  margin-bottom:30px;
+}
+#ban-message a{
+  color:inherit;
+  font-size: 18px;
+  border:solid 1px var(--font-color);
+  padding:3px 5px 5px 5px;
+  text-decoration: none;
+}
+#ban-message a:hover{
+  color:rgb(27, 27, 27);
+  background-color: var(--font-color);
+}
+
+#are-u-sure-popup{
+  width:320px;
+
+}
+#are-u-sure-popup h1{
+  margin-bottom:20px;
+}
+#are-u-sure-popup p{
+  margin-bottom:20px;
+}
+
+
+#group-create{
+  display:none;
+  text-align:left;
+  width:369px;
+}
+.popup.active{
+  display:block !important;
+}
+.popup.active + .blur{
+  display:block !important;
+}
+
+.popup.notActive~#main-chat-content,.popup.notActive~#menu,.popup.notActive~#menu-button{filter:none;}
+.popup.active~#main-chat-content,.popup.active~#menu,.popup.active~#menu-button{filter:blur(1px);}
+
+#group-create .headerH1{
+  padding-bottom:10px;
+}
+#group-create label{
+  font-size:20px;
+}
+#group-create #join-group-div{
+  border-bottom:solid 0.5px var(--font-color);
+  padding:20px;
+}
+#group-create #create-group-div{
+  padding:20px;
+}
+/* fix */
+
+#group-create input{
+  padding:5px;
+  color:var(--font-color);
+  background-color: transparent;
+  font-size: 19px;
+  margin:8px 8px 8px 0;
+  border: solid 1px var(--border-color);
+}
+#group-create input:focus{
+  outline:none;
+  border: solid 1px var(--border-color-hover);
+}
+#group-create input::placeholder{
+  color:var(--place-holder-col);
+  font-weight:normal;
+  font-size: 18px;
+  display:none;
+}
+
+/* fix */
+
+#group-create div.settingsButtonsSaveCancel{
+  margin-top:15px;
+}
+#group-create div.settingsButtonsSaveCancel .save{
+  width:55px;
+}
+#group-create #group-privacy-select{
+  text-align: center;
+}
+#group-create #privacy-option{
+  background-color: var(--background-color);
+  border: solid 1px var(--border-color);
+  margin:8px 8px 8px 0;
+  padding:5px;
+  position:absolute;
+  border-radius:2px;
+  width:70px;
+  height:35px;
+}
+#group-create #privacy-option:hover{
+  border: solid 1px var(--border-color-hover);
+  cursor: pointer;
+}
+#privacy-option.activeOption + div:hover{
+  border: solid 1px var(--border-color-hover);
+  cursor: pointer;
+}
+
+
+#privacy-option.activeOption + div{
+  display:block;
+  position: fixed;
+  transform: translate(0, 35px);
+  background-color: var(--background-color);
+  border: solid 1px var(--border-color);
+  margin:8px 8px 8px 0;
+  padding:5px;
+  border-radius:2px;
+  height:35px;
+  width:70px;
+}
+#privacy-option.notActiveOption + div{
+  display:none;
+}
+
+input.notActiveInput{
+  color:rgb(39, 39, 39) !important;
+  border-color: rgb(39, 39, 39) !important;
+}
+input.notActiveInput::placeholder{
+  color:rgb(39, 39, 39) !important;
+}
+input.notActiveInput:hover{
+  cursor: not-allowed;
+}
+
+body.loading div *{
+  visibility: hidden;
+}
+body.loading{
+  pointer-events: none;
+}
+body.starting *{
+  visibility: hidden;
+}
+body.loading #loading{
+  display:block;
+}
+
+body.loading button{
+  visibility: hidden;
+}
+
+#loading{
+  --height:100px;
+  --width:calc(var(--height) * calc(3 / 4));
+  position: fixed;
+  height:var(--height);
+  width:var(--width);
+  top:calc(50% - calc(var(--height) / 2));
+  left:calc(50% - calc(var(--width) / 2));
+  z-index: 1000000000000000000000000;
+  animation: rotate 1.4s cubic-bezier(0.3, 1.14, 1, 1) 0s infinite forwards;
+  display:none;
+}
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+#group-create{
+  background-color: var(--background-color);
+}
+#join-group{
+  border:solid 1px var(--border-color);
+  background-color: var(--background-color);
+  color:inherit;
+  padding:5px;
+  font-size: 19px;
+}
+#join-group:focus{
+  outline: none;
+  border-color:var(--border-color-hover);
+}
+#join-group:hover{
+  cursor: pointer;
+  border-color:var(--border-color-hover);
+}
+
+#group-create #join-group-div,#group-create #create-group-div{
+  padding-right:0;
+}
+
+#group-create #continue-group-adding{
+  margin-left:auto;
+}
+
+.required{
+  color:red;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  display:none;
+}

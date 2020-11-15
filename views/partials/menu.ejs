@@ -1,0 +1,39 @@
+<button id="menu-button"><i class="fas fa-bars"></i></button>
+<div id="menu">
+  <button id="settings-button">
+    <i class="fas fa-cog"></i>
+  </button>
+  <div id="nav-bar">
+    <input type="text" placeholder="search in your groups" spellcheck="false">
+    <button id="create-group-button">
+    <i class="fas fa-plus"></i>
+    </button>
+  </div>
+  <ul id="groups">
+    <% for(let i=0;i<data.yourGroups.length;i++){ %>
+      <% if(group === data.yourGroups[i]){ %>
+          <li class="group choosen" id="viseted">
+            <a class="group-link" >
+      <% }else{ %>
+          <li class="group choosen">
+            <a class="group-link" href="/group/<%= data.yourGroups[i] %>">
+      <% } %>
+          <p><%= data.yourGroups[i] %></p>
+          </a>
+          <button class="group-settings-button"><i class="fas fa-ellipsis-v"></i></button>
+          <div class="group-settings notActive">
+            <ul>
+              <li>
+                <a href="/profile/<%= data.yourGroups[i] %>" class="group-setting-info"> Info </a>
+              </li>
+              <% if(data.yourGroups[i] !== "main-repl-chat"){ %>
+                <li>
+                  <button class="group-setting-leave"> Leave </button>
+                </li>
+              <% } %>
+            </ul>
+          </div>
+        </li>
+    <% } %>
+  </ul>
+</div>

@@ -1,0 +1,8 @@
+<script>
+  const oldMessages = <%- data.oldMessages %>
+  for(let i=0;i<oldMessages.length;i++){
+    createMessage(oldMessages[i])
+  }
+  let messagesDIV=document.getElementById('messages')
+  messagesDIV.scrollTop = messagesDIV.scrollHeight;
+</script>

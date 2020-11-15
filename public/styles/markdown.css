@@ -1,0 +1,50 @@
+span.strong{
+  font-weight: bold;
+}
+span.italic{
+  font-style: italic;
+}
+
+span.underline{
+  text-decoration:underline;
+}
+span.linethrough{
+  text-decoration: line-through;
+}
+span.lineover{
+  text-decoration: overline;
+}
+del.doublestrike{
+  text-decoration-style: double;
+}
+
+
+span.smallfont{
+  font-size:10px;
+}
+span.normalfont{
+  font-size:20px;
+}
+span.bigfont{
+  font-size:30px;
+}
+span.hugefont{
+  font-size:38px;
+}
+
+span.spoilerText.hidden{
+  display:inline-block;
+  --color:rgb(18, 18, 18);
+  background-color: var(--color);
+  color: var(--color);
+  border-radius: 2px;
+}
+span.spoilerText.hidden:hover{
+  cursor: pointer;
+  --color:rgb(23, 23, 23);
+  transition: 0.1s;
+}
+span.spoilerText.visible{
+  transition: 0.2s;
+  background-color: rgb(34, 34, 34);
+} 

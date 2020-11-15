@@ -1,0 +1,28 @@
+<div id="settings" class="popup notActive">
+  <button class="close-button" onclick="closeSettings()">&#10006</button>
+  <h1 style="text-align:center;">Settings</h1>
+  <div id="color-changer">
+  
+  <p>Change your nickname color</p>
+  <div id="colors-grid-container">
+    <% const colorOptions=[
+    "default","blue","green","violet","orange","yellow","red-light","gray","blue-dark","green-light","violet-dark","brown","orange-golden","blue-light"
+    ] %>
+    <% for(let i=0;i<14;i++){ %>
+      <div id="<%= colorOptions[i] %>" class="color-option"></div>
+    <% } %>
+  </div>
+  </div>
+  <div id="theme-settings">
+    <p>Theme</p>
+    <div id="theme-buttons">
+      <button id="light-mode" onclick="changeMode('lightMode'); choosenMode='lightMode';">light-mode(noobs)</button>
+      <button id="dark-mode" onclick="changeMode('darkMode'); choosenMode='darkMode';">dark-mode(pros only)</button>
+    </div>
+  </div>
+  <div class="settingsButtonsSaveCancel">
+    <button class="cancel" onclick="closeSettings()">Cancel</button>
+    <button class="save" id="save-settings">Save</button>
+  </div>
+</div>
+<div class="blur" id="settings-blur" onclick="closeSettings()"></div>
